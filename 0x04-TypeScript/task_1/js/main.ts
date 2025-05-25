@@ -5,20 +5,20 @@ interface Teacher {
     location: string;
     contract: boolean;
     yearsOfExperience: number;
+    numberOfReports: number;
 }
 
-const teacher3: Teacher = {
+const teacherOne: Teacher = {
     firstName: 'Chinonso',
     lastName: 'Chukwu' ,
     fullTimeEmployee: true,
     yearsOfExperience: 3,
     location: 'Lagos',
     contract: true,
-}
+    numberOfReports: 20,
+};
 
-console.log(teacher3);
-
-const directorS: object = {
+const teacherTwo: Teacher = {
 
     firstName: 'Chinonso',
     lastName: 'Chukwu',
@@ -27,7 +27,11 @@ const directorS: object = {
     yearsOfExperience: 5,
     contract: true,
     numberOfReports: 50,
-}
+};
 
-console.log(directorS);
+console.log(teacherOne);
+printTeacher("Chinonso","Chukwu");
+function printTeacher(firstName: string, lastName: string) {
+    return `${firstName[0]}.${lastName}`;
+}
 
