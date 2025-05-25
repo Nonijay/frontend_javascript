@@ -7,7 +7,7 @@ const teacher3: object = {
     contract: true,
 }
 
-console.log(teacher3)
+console.log(teacher3);
 
 const directorS: object = {
 
@@ -20,5 +20,5 @@ const directorS: object = {
     numberOfReports: 50,
 }
 
-
+console.log(directorS);
 
