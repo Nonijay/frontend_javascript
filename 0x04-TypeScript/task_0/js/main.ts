@@ -28,10 +28,17 @@ const studentsList: student[] =[firstStudent, secondStudent];
 const table = document.createElement('table');
 table.id = 'studentTable';
 
-//create table header (thead)
+//create table header (thead) and give it an id
 const thead = document.createElement('thead');
 thead.id = 'myTableHead';
+
+//create a table row for the header element using the array studentList
+const headerRow = document.createElement('th');
+headerRow.textContent = " First Name"
+
 
 //create table body (tbody)
 const tbody = document.createElement('tbody');
 tbody.id = 'myTableBody';
+
+const row = document.createElement('tr');
