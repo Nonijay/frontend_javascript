@@ -25,5 +25,13 @@ const secondStudent: student = {
 const studentsList: student[] =[firstStudent, secondStudent];
 //using vanilla JS render a table for each elemnts in the array, append a new row to the table.
 
+const table = document.createElement('table');
+table.id = 'studentTable';
+
+//create table header (thead)
+const thead = document.createElement('thead');
+thead.id = 'myTableHead';
+
+//create table body (tbody)
 const tbody = document.createElement('tbody');
 tbody.id = 'myTableBody';
