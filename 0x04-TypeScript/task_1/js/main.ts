@@ -1,4 +1,13 @@
-const teacher3: object = {
+interface Teacher {
+    firstName: string;
+    lastName: string;
+    fullTimeEmployee: boolean;
+    location: string;
+    contract: boolean;
+    yearsOfExperience: number;
+}
+
+const teacher3: Teacher = {
     firstName: 'Chinonso',
     lastName: 'Chukwu' ,
     fullTimeEmployee: true,
