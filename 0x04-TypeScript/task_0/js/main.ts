@@ -27,18 +27,39 @@ const studentsList: student[] =[firstStudent, secondStudent];
 
 const table = document.createElement('table');
 table.id = 'studentTable';
+const headerRow =document.createElement('tr');
+
 
 //create table header (thead) and give it an id
 const thead = document.createElement('thead');
 thead.id = 'myTableHead';
 
 //create a table row for the header element using the array studentList
-const headerRow = document.createElement('th');
-headerRow.textContent = " First Name"
+const headerItem = document.createElement('th');
+headerItem.textContent = " First Name"
+const headerLocation = document.createElement('th');
+headerLocation.textContent = "Location";
+// const headers = Object.keys(studentsList[0]);
 
+headerRow.appendChild(headerItem)
+headerRow.appendChild(headerLocation)
+table.appendChild(table)
 
 //create table body (tbody)
 const tbody = document.createElement('tbody');
 tbody.id = 'myTableBody';
 
-const row = document.createElement('tr');
+
+studentsList.forEach((student) => {
+    const row = document.createElement('tr');
+    const firstDataCell = document.createElement('td');
+    firstDataCell.textContent = student.firstName;
+
+    const locationDataCell = document.createElement('td');
+    locationDataCell.textContent = student.location;
+
+    row.appendChild(firstDataCell);
+    row.appendChild(locationDataCell);
+
+    table.appendChild(row);
+});
